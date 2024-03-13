@@ -15,34 +15,49 @@ console.log('Test - should say "Hello World!"', hello());
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
 function helloName(name) {
-  return;
+  return 'Hello, ' + name + '!' ; //concatenation 
 }
 // Remember to call the function to test
-
+console.log(helloName('Jo')); //expect Hello Jo!
+console.log(helloName('Stacy'))//expect Hello Stacy!
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
-  // return firstNumber + secondNumber;
+function addNumbers(firstNumber, secondNumber) {
+  return firstNumber + secondNumber;
+   // return firstNumber + secondNumber;
 }
-
+console.log(addNumbers(8,2));//expect 10
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(firstNumber, secondNumber, thirdNumber) {
+return firstNumber * secondNumber * thirdNumber;
 }
-
+console.log(multiplyThree(5, 2, 10));//expect 100
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
+  } else {
+    return false;
   }
-  return;
+
 }
+console.log(isPositive(3));  // Expected: true
+console.log(isPositive(-1)); // Expected: false
+console.log(isPositive(0));  // Expected: false
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+function trueOrFalse(i) {
+ if (i % 2 === 0){
+return true;
+ } else {
+  return false;
+ }
+}
+console.log(trueOrFalse(10)); // Expect true, because 10 
+console.log(trueOrFalse(3));  // Expect false, because 3 
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
